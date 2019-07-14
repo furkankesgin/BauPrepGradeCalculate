@@ -94,6 +94,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 txt.setText(wt1.getText().toString());
+                try{
                 if (wt1.length()<1) {
                     txt.setText("please enter grades!");
                 }
@@ -149,7 +150,10 @@ public class MainActivity extends AppCompatActivity {
                    // DecimalFormat df = new DecimalFormat("#0.##");
                     txt.setText(dsonuc.toString());
                     txt.setTextSize(20);
-                }}
+                }catch(Exeception e){
+                System.out.println("EXEPTION HATASI ==> " + e);
+                }
+                }
         });
     }
 }
